@@ -1,4 +1,4 @@
-# For a symfony application to work properly, you MUST store this .htaccess in
+# For a symfony application to work properly, you MUST store this ..htaccess in
 # the same directory as your front controller, index.php, in a standard symfony
 # web application is under the "public" project subdirectory.
 
@@ -21,7 +21,7 @@ DirectoryIndex index.php
     # This RewriteRule is used to dynamically discover the RewriteBase path.
     # See https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewriterule
     # Here we will compare the stripped per-dir path *relative to the filesystem
-    # path where the .htaccess file is read from* with the URI of the request.
+    # path where the ..htaccess file is read from* with the URI of the request.
     # 
     # If a match is found, the prefix path is stored into an ENV var that is later 
     # used to properly prefix the URI of the front controller index.php.
@@ -33,7 +33,7 @@ DirectoryIndex index.php
     #   2. Strip the request uri the per-dir path and use ir as REQUEST_URI.
     #      This is documented in https://bit.ly/3zDm3SI ("What is matched?")
     #   3. Evaluate the RewriteCond, assuming your DocumentRoot is /var/www/html,
-    #      this .htaccess is in the /var/www/html/public dir and your request URI
+    #      this ..htaccess is in the /var/www/html/public dir and your request URI
     #      is /public/hello/world:
     #      * strip per-dir prefix: /var/www/html/public/hello/world -> hello/world
     #      * applying pattern '.*' to uri 'hello/world'
